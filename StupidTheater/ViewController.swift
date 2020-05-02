@@ -28,6 +28,36 @@ class ViewController: UIViewController {
         
         // Set the scene to the view
         sceneView.scene = scene
+
+        setUpVideoNode()
+
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback)
+        }
+        catch {
+            print("Error setting playback category: \(error)")
+        }
+    }
+
+    // Adapted from https://gist.github.com/glaurent/aad82c4185f3c92f21dc
+    func setUpVideoNode() {
+        let skScene = SKScene(size: CGSize(width: 1920, height: 1080))
+        let avPlayer = AVPlayer(url: Bundle.main.url(forResource: "charade_meeting", withExtension: "mp4")!)
+        let videoSKNode = SKVideoNode(avPlayer: avPlayer)
+        skScene.scaleMode = .aspectFit
+        videoSKNode.position = CGPoint(x: skScene.size.width / 2, y: skScene.size.height / 2)
+        videoSKNode.size = skScene.size
+        skScene.addChild(videoSKNode)
+
+        let screenNode = sceneView.scene.rootNode.childNode(withName: "screen", recursively: true)!
+        screenNode.geometry?.firstMaterial?.emission.contents = skScene
+        screenNode.geometry?.firstMaterial?.emission.intensity = 1
+
+        // flip video upside down, so that it's shown in the right position
+        videoSKNode.yScale = -1
+
+        videoSKNode.play()
+
     }
     
     override func viewWillAppear(_ animated: Bool) {

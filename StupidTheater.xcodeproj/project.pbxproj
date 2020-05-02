@@ -13,6 +13,8 @@
 		CD15070F245DCEBA00EA55E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD15070D245DCEBA00EA55E5 /* Main.storyboard */; };
 		CD150711245DCEBB00EA55E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD150710245DCEBB00EA55E5 /* Assets.xcassets */; };
 		CD150714245DCEBB00EA55E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD150712245DCEBB00EA55E5 /* LaunchScreen.storyboard */; };
+		CD15071E245DD8AE00EA55E5 /* charade_fight.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CD15071C245DD8AE00EA55E5 /* charade_fight.mp4 */; };
+		CD15071F245DD8AE00EA55E5 /* charade_meeting.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CD15071D245DD8AE00EA55E5 /* charade_meeting.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		CD150710245DCEBB00EA55E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD150713245DCEBB00EA55E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD150715245DCEBB00EA55E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD15071C245DD8AE00EA55E5 /* charade_fight.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = charade_fight.mp4; sourceTree = "<group>"; };
+		CD15071D245DD8AE00EA55E5 /* charade_meeting.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = charade_meeting.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				CD150707245DCEBA00EA55E5 /* AppDelegate.swift */,
+				CD15071B245DD84A00EA55E5 /* Videos */,
 				CD150709245DCEBA00EA55E5 /* art.scnassets */,
 				CD15070B245DCEBA00EA55E5 /* ViewController.swift */,
 				CD15070D245DCEBA00EA55E5 /* Main.storyboard */,
@@ -65,6 +70,15 @@
 				CD150715245DCEBB00EA55E5 /* Info.plist */,
 			);
 			path = StupidTheater;
+			sourceTree = "<group>";
+		};
+		CD15071B245DD84A00EA55E5 /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+				CD15071C245DD8AE00EA55E5 /* charade_fight.mp4 */,
+				CD15071D245DD8AE00EA55E5 /* charade_meeting.mp4 */,
+			);
+			path = Videos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,7 +139,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD15071F245DD8AE00EA55E5 /* charade_meeting.mp4 in Resources */,
 				CD15070A245DCEBA00EA55E5 /* art.scnassets in Resources */,
+				CD15071E245DD8AE00EA55E5 /* charade_fight.mp4 in Resources */,
 				CD150714245DCEBB00EA55E5 /* LaunchScreen.storyboard in Resources */,
 				CD150711245DCEBB00EA55E5 /* Assets.xcassets in Resources */,
 				CD15070F245DCEBA00EA55E5 /* Main.storyboard in Resources */,

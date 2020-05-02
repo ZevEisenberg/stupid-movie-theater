@@ -58,7 +58,6 @@ class ViewController: UIViewController {
     func setUpVideoNode() {
         let skScene = SKScene(size: CGSize(width: 1920, height: 1080))
         let avPlayer = AVPlayer(url: Bundle.main.url(forResource: "charade_meeting", withExtension: "mp4")!)
-        avPlayer.volume = 0.1
         let videoSKNode = SKVideoNode(avPlayer: avPlayer)
         skScene.scaleMode = .aspectFit
         videoSKNode.position = CGPoint(x: skScene.size.width / 2, y: skScene.size.height / 2)
@@ -71,8 +70,6 @@ class ViewController: UIViewController {
 
         // flip video upside down, so that it's shown in the right position
         videoSKNode.yScale = -1
-
-        videoSKNode.play()
     }
     
     override func viewWillAppear(_ animated: Bool) {

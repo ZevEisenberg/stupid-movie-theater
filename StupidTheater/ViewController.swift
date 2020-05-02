@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         sceneView.delegate = self
         
         // Show statistics such as fps and timing information
-        sceneView.showsStatistics = true
+//        sceneView.showsStatistics = true
         
         // Create a new scene
         let scene = SCNScene(named: "art.scnassets/Theater.scn")!

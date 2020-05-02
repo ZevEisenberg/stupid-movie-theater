@@ -13,6 +13,8 @@ import ARKit
 class ViewController: UIViewController {
 
     @IBOutlet var sceneView: ARSCNView!
+
+    private let playAudioWhileMuted = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,11 +33,13 @@ class ViewController: UIViewController {
 
         setUpVideoNode()
 
-        do {
-            try AVAudioSession.sharedInstance().setCategory(.playback)
-        }
-        catch {
-            print("Error setting playback category: \(error)")
+        if playAudioWhileMuted {
+            do {
+                try AVAudioSession.sharedInstance().setCategory(.playback)
+            }
+            catch {
+                print("Error setting playback category: \(error)")
+            }
         }
     }
 

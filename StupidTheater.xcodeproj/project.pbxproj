@@ -15,7 +15,10 @@
 		CD150714245DCEBB00EA55E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD150712245DCEBB00EA55E5 /* LaunchScreen.storyboard */; };
 		CD15071E245DD8AE00EA55E5 /* charade_fight.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CD15071C245DD8AE00EA55E5 /* charade_fight.mp4 */; };
 		CD15071F245DD8AE00EA55E5 /* charade_meeting.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CD15071D245DD8AE00EA55E5 /* charade_meeting.mp4 */; };
-		CD1F9D54245E333C00DFC45D /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = CD1F9D53245E333C00DFC45D /* Sounds */; };
+		CD1F9D5F245E3D3900DFC45D /* Popcorn.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CD1F9D5E245E3D3900DFC45D /* Popcorn.mp3 */; };
+		CD1F9D64245E3DCE00DFC45D /* Candy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CD1F9D60245E3DCE00DFC45D /* Candy.mp3 */; };
+		CD1F9D65245E3DCE00DFC45D /* down-in-front.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CD1F9D61245E3DCE00DFC45D /* down-in-front.mp3 */; };
+		CD1F9D67245E3DCE00DFC45D /* Straw.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CD1F9D63245E3DCE00DFC45D /* Straw.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +32,10 @@
 		CD150715245DCEBB00EA55E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD15071C245DD8AE00EA55E5 /* charade_fight.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = charade_fight.mp4; sourceTree = "<group>"; };
 		CD15071D245DD8AE00EA55E5 /* charade_meeting.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = charade_meeting.mp4; sourceTree = "<group>"; };
-		CD1F9D53245E333C00DFC45D /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sounds; sourceTree = "<group>"; };
+		CD1F9D5E245E3D3900DFC45D /* Popcorn.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Popcorn.mp3; sourceTree = "<group>"; };
+		CD1F9D60245E3DCE00DFC45D /* Candy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Candy.mp3; sourceTree = "<group>"; };
+		CD1F9D61245E3DCE00DFC45D /* down-in-front.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "down-in-front.mp3"; sourceTree = "<group>"; };
+		CD1F9D63245E3DCE00DFC45D /* Straw.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Straw.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				CD150707245DCEBA00EA55E5 /* AppDelegate.swift */,
-				CD1F9D53245E333C00DFC45D /* Sounds */,
+				CD1F9D55245E38CD00DFC45D /* Sounds */,
 				CD15071B245DD84A00EA55E5 /* Videos */,
 				CD150709245DCEBA00EA55E5 /* art.scnassets */,
 				CD15070B245DCEBA00EA55E5 /* ViewController.swift */,
@@ -82,6 +88,17 @@
 				CD15071D245DD8AE00EA55E5 /* charade_meeting.mp4 */,
 			);
 			path = Videos;
+			sourceTree = "<group>";
+		};
+		CD1F9D55245E38CD00DFC45D /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				CD1F9D5E245E3D3900DFC45D /* Popcorn.mp3 */,
+				CD1F9D60245E3DCE00DFC45D /* Candy.mp3 */,
+				CD1F9D61245E3DCE00DFC45D /* down-in-front.mp3 */,
+				CD1F9D63245E3DCE00DFC45D /* Straw.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,10 +161,13 @@
 			files = (
 				CD15071F245DD8AE00EA55E5 /* charade_meeting.mp4 in Resources */,
 				CD15070A245DCEBA00EA55E5 /* art.scnassets in Resources */,
-				CD1F9D54245E333C00DFC45D /* Sounds in Resources */,
+				CD1F9D64245E3DCE00DFC45D /* Candy.mp3 in Resources */,
 				CD15071E245DD8AE00EA55E5 /* charade_fight.mp4 in Resources */,
 				CD150714245DCEBB00EA55E5 /* LaunchScreen.storyboard in Resources */,
+				CD1F9D65245E3DCE00DFC45D /* down-in-front.mp3 in Resources */,
+				CD1F9D67245E3DCE00DFC45D /* Straw.mp3 in Resources */,
 				CD150711245DCEBB00EA55E5 /* Assets.xcassets in Resources */,
+				CD1F9D5F245E3D3900DFC45D /* Popcorn.mp3 in Resources */,
 				CD15070F245DCEBA00EA55E5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

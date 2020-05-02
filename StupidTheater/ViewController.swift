@@ -14,7 +14,16 @@ class ViewController: UIViewController {
 
     @IBOutlet var sceneView: ARSCNView!
 
-    private let playAudioWhileMuted = false
+    private let playAudioWhileMuted = true
+
+    private let audioFileNames = [
+        "Popcorn",
+        "Candy",
+        "Straw",
+        "down-in-front",
+    ]
+
+    private var nextSoundEffect = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,12 +50,15 @@ class ViewController: UIViewController {
                 print("Error setting playback category: \(error)")
             }
         }
+
+        sceneView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(screenTapped(_:))))
     }
 
     // Adapted from https://gist.github.com/glaurent/aad82c4185f3c92f21dc
     func setUpVideoNode() {
         let skScene = SKScene(size: CGSize(width: 1920, height: 1080))
         let avPlayer = AVPlayer(url: Bundle.main.url(forResource: "charade_meeting", withExtension: "mp4")!)
+        avPlayer.volume = 0.1
         let videoSKNode = SKVideoNode(avPlayer: avPlayer)
         skScene.scaleMode = .aspectFit
         videoSKNode.position = CGPoint(x: skScene.size.width / 2, y: skScene.size.height / 2)
@@ -61,7 +73,6 @@ class ViewController: UIViewController {
         videoSKNode.yScale = -1
 
         videoSKNode.play()
-
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -81,6 +92,26 @@ class ViewController: UIViewController {
         // Pause the view's session
         sceneView.session.pause()
     }
+}
+
+private extension ViewController {
+
+    @objc func screenTapped(_ sender: UITapGestureRecognizer) {
+        let effectName = audioFileNames[nextSoundEffect]
+        nextSoundEffect += 1
+        if nextSoundEffect >= audioFileNames.endIndex {
+            nextSoundEffect = 0
+        }
+        let audioNode = sceneView.scene.rootNode.childNode(withName: effectName, recursively: true)!
+        let audioSource = SCNAudioSource(fileNamed: effectName + ".mp3")!
+        let audioPlayer = SCNAudioPlayer(source: audioSource)
+
+        audioNode.addAudioPlayer(audioPlayer)
+
+        let play = SCNAction.playAudio(audioSource, waitForCompletion: true)
+        audioNode.runAction(play)
+    }
+
 }
 
 extension ViewController: ARSCNViewDelegate {

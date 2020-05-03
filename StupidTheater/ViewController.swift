@@ -70,6 +70,8 @@ class ViewController: UIViewController {
 
         // flip video upside down, so that it's shown in the right position
         videoSKNode.yScale = -1
+
+        videoSKNode.play()
     }
     
     override func viewWillAppear(_ animated: Bool) {
